@@ -1,0 +1,300 @@
+/* mobile first Design */
+@media all and (min-width: 360px) and (max-width: 640px){
+
+    html, body {
+        margin: 0px;
+        padding: 0px;
+        height: 100%;
+    }
+
+    /* Code to group divs that code other divs with clearfix */
+	.clearfix:before,
+	.clearfix:after {
+		content:"";
+		display: table;
+		clear: both;
+	}
+
+    /* Make media responsive to respective container */
+	img, video, canvas {
+		max-width: 100%;
+		height: auto;
+	}
+
+    /* Header */
+	.header-container {
+		width: 100%;
+		background-image: linear-gradient(to top, #0b3f22 0%, #000000 74%);
+		display: block; /* Changed the game for me. */
+		height: 10vh;
+		position: sticky;
+		z-index: 999;
+
+	}
+
+    .logo-container {
+		width: 15%;
+		height: 100%;
+		float: left;
+		background-color: none;
+	}
+
+	.logo-container > p {
+		color: white;
+	}
+
+	.title-container {
+		justify-content: center;
+		width: 60%;
+		height: 100%;
+		float: left;
+		background-color: none;
+	}
+
+	.title-container h1 {
+		align-items: center;
+		text-align: center;
+		justify-content: center;
+		font-size: 100%;
+		font-family: "Luminari", monospace;
+		color: white;
+		position: relative;
+		top: 30%;
+	}
+
+	.navbar-container {
+		height: 100%;
+		width: 20%;
+		padding: 0;
+		background-color: none;
+		background-image: linear-gradient(to top, #0b3f22 0%, #000000 74%);
+		color: white;
+		overflow: none;
+		float: right;
+
+	}
+
+	.navbar {
+		display: none;
+		position: absolute;
+		top: 10vh;
+		right: 0vw;
+		width: 100%;
+		background-image: linear-gradient(to top, #0b3f22 0%, #000000 74%);
+	}
+
+	/* Whenever someone hovers over the navbar container it will change to green */
+	.navbar-container:hover, .navbar-container:focus{
+		background: rgb(14, 84, 14);
+	}
+
+	/* Show the dropdown menu when the user clicks on the dropdown button */
+	.navbar-container:focus .navbar {
+		display: block;
+		z-index: 5;
+	}
+
+	/* Please implement better close feature */
+
+
+	/* containers for each navbar header */
+	.navbar-column {
+		width: 100%;
+		height: 20vh;
+	}
+
+	/* each individual navbar link */
+	.navbar a {
+		font-size: 5em;
+		color: white;
+		border: 2px solid black;
+		z-index: 999;
+		width: 10vw;
+		height: 10vw;
+		position: relative;
+		
+	}
+
+	/* Justify content to the center of the drop down menu */
+
+	/* 1st content wrapper for home page */
+	.content-wrapper-1 {
+		position: relative;
+		height: 33%;
+		width: 100%;
+		display: block;
+		background-color: black;
+		z-index: 1;
+	} 
+
+
+	/* Video which is also its canvas */
+	.video-bg:before,
+	.video-bg:after{
+		display: table;
+		content: "";
+	}
+	.video-bg:after{
+		clear: both;
+	}
+
+	.video-bg {
+		position: relative;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		min-width: 100%;
+		min-height: 100%;
+		opacity: 30%;
+		float: left;
+		z-index: 1;
+	}
+
+	.box {
+		display: none;
+	}
+
+
+	.content-wrapper-2 {
+		position: relative;
+		display: inline-block;
+		/* background-color: rgba(91, 156, 91, 0.253); */
+		padding: 5%;
+	}
+
+	/* hey part */
+	.intro {
+		border: 5px, solid, black;
+		font-size: 1.5em;
+		margin: 1em;
+	}
+
+	.bio {
+		margin: 1.2em;
+	}
+
+	.headshot {
+		float: right;
+		max-width: 40vw;
+	}
+
+	.explain {
+		margin: 1em;
+	}
+
+
+
+
+
+
+	/* Support page Mobile */
+	.support-wrapper {
+		height: 50vh;
+		width: 100%;
+		background-color: #000000;
+	}
+
+
+/* For More Posts Mobile Page */
+	.main-content::before,
+	.main-content::after {
+			content: "";
+			display: table;
+		}
+		
+	.main-content::after {
+			clear: both;
+		}
+		
+		.main-content {
+			*zoom: 1;
+		}
+
+	.main-content {
+		width: 63.197026%;
+		border: 1px solid black;
+		position: relative;
+		padding: 2%;
+		height: 100%;
+	}
+
+	.post-content:before,
+	.post-content:after {
+		content: "";
+		display: table;
+	}
+
+	.post-content:after{
+		clear: both;
+	}
+
+	.post-content {
+		height: 330vh;
+		width: 100%;
+		background-color: #000000;
+		background-image: linear-gradient(315deg, #000000 0%, #414141 74%);
+		position: absolute;
+	}
+}
+
+/* Tablet Design */
+
+@media all and (min-width: 640px) and (max-width: 1023px) {
+
+    .box {
+		height: 200px;
+		width: 400px;
+		background-color: green;
+	}
+
+	.box > h1, h2 {
+		top: 0;
+		left: 90px;
+	}
+    
+}
+
+/* Desktop / Laptop Page Design */
+
+@media all and (min-width: 1024px) {
+
+
+    /* Page Container changes to absolute */
+    #page-container {
+        position: absolute;
+    }
+
+    /* Def gonna need debugging */
+    .header-container {
+		position: sticky;
+		top: 0;
+		border-bottom: 5px solid black;
+		z-index: 998;
+		height: 10vh;
+		overflow: hidden;
+		padding-bottom: 15px;
+	}
+
+    
+    .logo-container {
+		height: 50%;	
+	}
+
+    .title-container {
+		justify-content: center;
+		height: 50%;
+		width: 75%;
+		float: left;
+	}
+
+    .title-container h1 {
+		align-items: center;
+		text-align: center;
+		font-size: 2rem;
+		font-family: "Luminari", monospace;
+		color: white;
+	}
+
+    
+}
